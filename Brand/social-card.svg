@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1280" height="640" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg">
+  <title>SpawnWatch social card</title>
+
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A84FF"/>
+      <stop offset="100%" stop-color="#0040C9"/>
+    </linearGradient>
+    <radialGradient id="hilite" cx="22%" cy="22%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="focusGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="65%" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#0F1B2D"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="640" fill="url(#cardBg)"/>
+
+  <!-- Decorative branching pattern faded -->
+  <g opacity="0.07" fill="none" stroke="#0A84FF" stroke-width="3" stroke-linecap="round">
+    <path d="M 100 100 Q 250 250 400 200"/>
+    <path d="M 100 100 Q 250 100 400 100"/>
+    <path d="M 100 540 Q 250 400 400 460"/>
+    <path d="M 1100 540 Q 950 400 800 460"/>
+    <path d="M 1180 100 Q 1030 250 880 200"/>
+  </g>
+
+  <!-- Mark -->
+  <g transform="translate(140, 175) scale(0.2832)">
+    <rect x="0" y="0" width="1024" height="1024" rx="232" ry="232" fill="url(#bgGradient)"/>
+    <rect x="0" y="0" width="1024" height="1024" rx="232" ry="232" fill="url(#hilite)"/>
+    <circle cx="720" cy="512" r="180" fill="url(#focusGlow)"/>
+    <g fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round">
+      <path d="M 380 512 Q 540 380 700 260" opacity="0.55"/>
+      <path d="M 380 512 L 700 512" opacity="0.95"/>
+      <path d="M 380 512 Q 540 644 700 764" opacity="0.35"/>
+    </g>
+    <circle cx="300" cy="512" r="84" fill="#FFFFFF"/>
+    <circle cx="720" cy="512" r="92" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.35"/>
+    <circle cx="720" cy="260" r="52" fill="#FFFFFF" opacity="0.65"/>
+    <circle cx="720" cy="512" r="64" fill="#FFFFFF"/>
+    <circle cx="720" cy="764" r="44" fill="#FFFFFF" opacity="0.45"/>
+    <circle cx="754" cy="478" r="14" fill="#34C759"/>
+  </g>
+
+  <!-- Text block -->
+  <g transform="translate(490, 0)" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif">
+    <text x="0" y="270" font-size="86" font-weight="800" fill="#FFFFFF" letter-spacing="-2.5">SpawnWatch</text>
+    <text x="0" y="335" font-size="30" font-weight="500" fill="#80B4FF" letter-spacing="0.5">App-attributed subprocess tracer for macOS</text>
+
+    <!-- Feature pills -->
+    <g transform="translate(0, 380)" font-size="20" font-weight="600">
+      <g>
+        <rect x="0" y="0" width="200" height="44" rx="22" fill="#0A84FF" opacity="0.18"/>
+        <text x="22" y="29" fill="#80B4FF">live exec/fork/exit</text>
+      </g>
+      <g transform="translate(216, 0)">
+        <rect x="0" y="0" width="158" height="44" rx="22" fill="#34C759" opacity="0.18"/>
+        <text x="22" y="29" fill="#7CE091">code-signing</text>
+      </g>
+      <g transform="translate(390, 0)">
+        <rect x="0" y="0" width="138" height="44" rx="22" fill="#FF453A" opacity="0.18"/>
+        <text x="22" y="29" fill="#FF8E84">trace mode</text>
+      </g>
+      <g transform="translate(544, 0)">
+        <rect x="0" y="0" width="146" height="44" rx="22" fill="#BF5AF2" opacity="0.18"/>
+        <text x="22" y="29" fill="#D396F8">argv diff</text>
+      </g>
+    </g>
+
+    <text x="0" y="500" font-size="22" font-weight="400" fill="#5E7080">github.com/sanjevirau/spawn-app · MIT</text>
+  </g>
+</svg>

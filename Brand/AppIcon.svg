@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+  <title>SpawnWatch</title>
+  <desc>App-attributed subprocess tracer for macOS — one parent process branches into children with varying lifetimes.</desc>
+
+  <defs>
+    <!-- Deep blue gradient background -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A84FF"/>
+      <stop offset="100%" stop-color="#0040C9"/>
+    </linearGradient>
+
+    <!-- Subtle inner glow at top-left -->
+    <radialGradient id="hilite" cx="22%" cy="22%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Soft glow used by the focal child -->
+    <radialGradient id="focusGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="65%" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Squircle background -->
+  <rect x="0" y="0" width="1024" height="1024" rx="232" ry="232" fill="url(#bgGradient)"/>
+  <rect x="0" y="0" width="1024" height="1024" rx="232" ry="232" fill="url(#hilite)"/>
+
+  <!-- Soft glow around the focal (alive) child -->
+  <circle cx="720" cy="512" r="180" fill="url(#focusGlow)"/>
+
+  <!-- Three branches: top exited (dim), middle alive (bright), bottom killed (dimmest) -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round">
+    <path d="M 380 512 Q 540 380 700 260" opacity="0.55"/>
+    <path d="M 380 512 L 700 512" opacity="0.95"/>
+    <path d="M 380 512 Q 540 644 700 764" opacity="0.35"/>
+  </g>
+
+  <!-- Parent process (left) -->
+  <circle cx="300" cy="512" r="84" fill="#FFFFFF"/>
+
+  <!-- "Live" pulse ring around the focal child -->
+  <circle cx="720" cy="512" r="92" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.35"/>
+
+  <!-- Children: top (exited, 0.65), middle (alive, 1.0), bottom (terminated, 0.45) -->
+  <circle cx="720" cy="260" r="52" fill="#FFFFFF" opacity="0.65"/>
+  <circle cx="720" cy="512" r="64" fill="#FFFFFF"/>
+  <circle cx="720" cy="764" r="44" fill="#FFFFFF" opacity="0.45"/>
+
+  <!-- Tiny status accent on the focal child -->
+  <circle cx="754" cy="478" r="14" fill="#34C759"/>
+</svg>

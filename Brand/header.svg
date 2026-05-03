@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="320" viewBox="0 0 1200 320" xmlns="http://www.w3.org/2000/svg">
+  <title>SpawnWatch — App-attributed subprocess tracer for macOS</title>
+
+  <defs>
+    <linearGradient id="bannerBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540"/>
+      <stop offset="100%" stop-color="#0F1B2D"/>
+    </linearGradient>
+    <linearGradient id="iconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A84FF"/>
+      <stop offset="100%" stop-color="#0040C9"/>
+    </linearGradient>
+    <radialGradient id="iconHi" cx="22%" cy="22%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="iconGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="65%" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Rounded banner background -->
+  <rect width="1200" height="320" rx="22" ry="22" fill="url(#bannerBg)"/>
+
+  <!-- Subtle decorative branches -->
+  <g opacity="0.08" fill="none" stroke="#0A84FF" stroke-width="3" stroke-linecap="round">
+    <path d="M 880 60 Q 1010 110 1170 80"/>
+    <path d="M 880 60 Q 980 160 880 260"/>
+    <path d="M 880 260 Q 1020 230 1170 250"/>
+    <path d="M 700 40 Q 820 100 880 60"/>
+    <path d="M 700 280 Q 820 220 880 260"/>
+  </g>
+  <g opacity="0.18" fill="#0A84FF">
+    <circle cx="700" cy="40" r="3"/>
+    <circle cx="700" cy="280" r="3"/>
+    <circle cx="880" cy="60" r="4"/>
+    <circle cx="880" cy="260" r="4"/>
+    <circle cx="1170" cy="80" r="3"/>
+    <circle cx="1170" cy="250" r="3"/>
+  </g>
+
+  <!-- Mark (220 × 220) -->
+  <g transform="translate(60, 50) scale(0.2148)">
+    <rect x="0" y="0" width="1024" height="1024" rx="232" ry="232" fill="url(#iconBg)"/>
+    <rect x="0" y="0" width="1024" height="1024" rx="232" ry="232" fill="url(#iconHi)"/>
+    <circle cx="720" cy="512" r="180" fill="url(#iconGlow)"/>
+    <g fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round">
+      <path d="M 380 512 Q 540 380 700 260" opacity="0.55"/>
+      <path d="M 380 512 L 700 512" opacity="0.95"/>
+      <path d="M 380 512 Q 540 644 700 764" opacity="0.35"/>
+    </g>
+    <circle cx="300" cy="512" r="84" fill="#FFFFFF"/>
+    <circle cx="720" cy="512" r="92" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.35"/>
+    <circle cx="720" cy="260" r="52" fill="#FFFFFF" opacity="0.65"/>
+    <circle cx="720" cy="512" r="64" fill="#FFFFFF"/>
+    <circle cx="720" cy="764" r="44" fill="#FFFFFF" opacity="0.45"/>
+    <circle cx="754" cy="478" r="14" fill="#34C759"/>
+  </g>
+
+  <!-- Wordmark + tagline -->
+  <g font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif">
+    <text x="320" y="155" font-size="84" font-weight="800" fill="#FFFFFF" letter-spacing="-2.5">SpawnWatch</text>
+    <text x="324" y="198" font-size="24" font-weight="500" fill="#80B4FF" letter-spacing="0.4">App-attributed subprocess tracer for macOS</text>
+
+    <!-- Feature pills -->
+    <g transform="translate(320, 230)" font-size="15" font-weight="600">
+      <g>
+        <rect x="0" y="0" width="170" height="30" rx="15" fill="#0A84FF" opacity="0.18"/>
+        <text x="16" y="20" fill="#80B4FF">live exec / fork / exit</text>
+      </g>
+      <g transform="translate(184, 0)">
+        <rect x="0" y="0" width="124" height="30" rx="15" fill="#34C759" opacity="0.18"/>
+        <text x="16" y="20" fill="#7CE091">code-signing</text>
+      </g>
+      <g transform="translate(322, 0)">
+        <rect x="0" y="0" width="108" height="30" rx="15" fill="#FF453A" opacity="0.18"/>
+        <text x="16" y="20" fill="#FF8E84">trace mode</text>
+      </g>
+      <g transform="translate(444, 0)">
+        <rect x="0" y="0" width="98" height="30" rx="15" fill="#BF5AF2" opacity="0.18"/>
+        <text x="16" y="20" fill="#D396F8">argv diff</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="240" viewBox="0 0 900 240" xmlns="http://www.w3.org/2000/svg">
+  <title>SpawnWatch wordmark</title>
+
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A84FF"/>
+      <stop offset="100%" stop-color="#0040C9"/>
+    </linearGradient>
+    <radialGradient id="hilite" cx="22%" cy="22%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="focusGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.55"/>
+      <stop offset="65%" stop-color="#FFFFFF" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Mark (icon scaled to 200x200) -->
+  <g transform="translate(20, 20) scale(0.1953)">
+    <rect x="0" y="0" width="1024" height="1024" rx="232" ry="232" fill="url(#bgGradient)"/>
+    <rect x="0" y="0" width="1024" height="1024" rx="232" ry="232" fill="url(#hilite)"/>
+    <circle cx="720" cy="512" r="180" fill="url(#focusGlow)"/>
+    <g fill="none" stroke="#FFFFFF" stroke-width="22" stroke-linecap="round">
+      <path d="M 380 512 Q 540 380 700 260" opacity="0.55"/>
+      <path d="M 380 512 L 700 512" opacity="0.95"/>
+      <path d="M 380 512 Q 540 644 700 764" opacity="0.35"/>
+    </g>
+    <circle cx="300" cy="512" r="84" fill="#FFFFFF"/>
+    <circle cx="720" cy="512" r="92" fill="none" stroke="#FFFFFF" stroke-width="5" opacity="0.35"/>
+    <circle cx="720" cy="260" r="52" fill="#FFFFFF" opacity="0.65"/>
+    <circle cx="720" cy="512" r="64" fill="#FFFFFF"/>
+    <circle cx="720" cy="764" r="44" fill="#FFFFFF" opacity="0.45"/>
+    <circle cx="754" cy="478" r="14" fill="#34C759"/>
+  </g>
+
+  <!-- Wordmark text -->
+  <g transform="translate(250, 0)" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', system-ui, sans-serif">
+    <text x="0" y="130" font-size="72" font-weight="800" fill="#0A2540" letter-spacing="-2">SpawnWatch</text>
+    <text x="0" y="172" font-size="22" font-weight="400" fill="#5E6E82" letter-spacing="0.5">App-attributed subprocess tracer for macOS</text>
+  </g>
+</svg>

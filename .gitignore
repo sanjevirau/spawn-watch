@@ -1,0 +1,11 @@
+.build/
+build/
+logs/
+.context/
+.swiftpm/
+*.xcodeproj/
+xcuserdata/
+DerivedData/
+.DS_Store
+*.zip
+*.dmg
