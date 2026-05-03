@@ -66,6 +66,16 @@ swift Scripts/generate-hero.swift path/to/new-screenshot@2x.png
 
 Output overwrites `Brand/hero.png`. The script is theme- and dimension-agnostic — it pads margins around whatever screenshot you give it.
 
+## Regenerating the social preview PNG
+
+GitHub's repo Settings → Social preview accepts PNG only. To produce a 1280×640 PNG that exactly matches `social-card.svg`:
+
+```sh
+swift Scripts/generate-social.swift ~/Desktop/spawn-app-social.png
+```
+
+The script uses CoreGraphics directly (no SVG → PNG converter needed) and produces a deterministic 1280×640 output. Drop the PNG into Settings → Options → Social preview.
+
 ## Don'ts
 
 - Don't recolor the background to non-blues — the brand is anchored on system blue.
