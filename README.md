@@ -32,8 +32,8 @@ SpawnWatch fills that gap with a SwiftUI app that:
 
 ## Features
 
-| | |
-|--|--|
+| Feature | What it does |
+|---------|--------------|
 | **Real-time stream** | `exec` / `fork` / `exit` events with full argv, cwd, and timestamps. Falls back to `libproc` polling if the user denies admin auth. |
 | **App attribution** | Every spawn is mapped back to its owning macOS app and classified by relationship. |
 | **Code-signing trust** | `SecStaticCode` inspection on every binary, async + cached. Color-coded badges for Apple / Developer ID / ad-hoc / unsigned. |
