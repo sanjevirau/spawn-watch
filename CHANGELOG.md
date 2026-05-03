@@ -4,6 +4,13 @@ All notable changes to SpawnWatch are documented here. The format follows [Keep 
 
 ## [Unreleased]
 
+## [0.1.1] — 2026-05-03
+
+### Added
+- Releases now ship a **`SpawnWatch.dmg`** disk image alongside `SpawnWatch.zip` — Mac-native install with a "drag to Applications" window. Both formats remain universal (arm64 + x86_64).
+- New `Scripts/create-dmg.sh` wraps an existing `.app` into a compressed UDZO disk image with an `Applications` shortcut. Usable locally and from CI.
+- README and release notes updated with both install paths.
+
 ## [0.1.0] — 2026-05-03
 
 ### Added
@@ -28,5 +35,6 @@ All notable changes to SpawnWatch are documented here. The format follows [Keep 
 ### Tests
 - **98 tests across 16 suites** covering parsing, store ingestion lifecycle, code-signing inspection on real system binaries, trace persistence round-trip, dedupe actor behavior, backward-compatible decoding of v0.1 export fixtures, and edge cases for bundle resolution and trace diffing. CI runs the full suite on every push.
 
-[Unreleased]: https://github.com/sanjevirau/spawn-app/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/sanjevirau/spawn-app/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/sanjevirau/spawn-app/releases/tag/v0.1.1
 [0.1.0]: https://github.com/sanjevirau/spawn-app/releases/tag/v0.1.0

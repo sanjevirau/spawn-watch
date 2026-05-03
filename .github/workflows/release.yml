@@ -44,6 +44,11 @@ jobs:
           ditto -c -k --keepParent SpawnWatch.app SpawnWatch.zip
           shasum -a 256 SpawnWatch.zip | tee SpawnWatch.zip.sha256
 
+      - name: Create .dmg
+        run: |
+          ./Scripts/create-dmg.sh
+          shasum -a 256 build/SpawnWatch.dmg | tee build/SpawnWatch.dmg.sha256
+
       - name: Generate release notes
         id: notes
         run: |
@@ -55,13 +60,21 @@ jobs:
             echo ""
             echo "### Install"
             echo ""
-            echo '1. Download `SpawnWatch.zip` below'
-            echo "2. Unzip and drag \`SpawnWatch.app\` to /Applications"
+            echo "**Option A — DMG (recommended):**"
+            echo ""
+            echo '1. Download `SpawnWatch.dmg` below'
+            echo "2. Double-click to mount, drag \`SpawnWatch\` onto the \`Applications\` shortcut"
             echo "3. **First launch** (unsigned app): right-click → Open, *or* run \`xattr -dr com.apple.quarantine /Applications/SpawnWatch.app\`"
+            echo ""
+            echo "**Option B — ZIP:**"
+            echo ""
+            echo '1. Download `SpawnWatch.zip`, unzip, drag `SpawnWatch.app` to `/Applications`'
+            echo "2. Same Gatekeeper bypass as above"
             echo ""
             echo "### Verify"
             echo ""
             echo '```'
+            cat build/SpawnWatch.dmg.sha256
             cat build/SpawnWatch.zip.sha256
             echo '```'
             echo ""
@@ -81,6 +94,8 @@ jobs:
           body: ${{ steps.notes.outputs.notes }}
           generate_release_notes: true
           files: |
+            build/SpawnWatch.dmg
+            build/SpawnWatch.dmg.sha256
             build/SpawnWatch.zip
             build/SpawnWatch.zip.sha256
           fail_on_unmatched_files: true

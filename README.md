@@ -48,9 +48,12 @@ SpawnWatch fills that gap with a SwiftUI app that:
 
 ### Pre-built (recommended)
 
-1. Grab `SpawnWatch.zip` from the [Releases](https://github.com/sanjevirau/spawn-app/releases) page — **universal binary**, runs natively on Apple Silicon (M-series) and Intel.
-2. Unzip and drag `SpawnWatch.app` to `/Applications`
-3. **First launch:** see [Gatekeeper](#gatekeeper-it-cant-be-checked-for-malicious-software) below — the app is unsigned, so you'll need to bypass once
+Each release ships a **universal binary** (Apple Silicon + Intel) in two formats:
+
+- **`SpawnWatch.dmg`** — Mac-native disk image. Double-click to mount, drag the icon onto the `Applications` shortcut.
+- **`SpawnWatch.zip`** — same `.app`, just zipped. Unzip and drag to `/Applications`.
+
+Grab either from the [Releases](https://github.com/sanjevirau/spawn-app/releases) page. Both are unsigned, so on first launch see [Gatekeeper](#gatekeeper-it-cant-be-checked-for-malicious-software) below to bypass once.
 
 ### From source
 
